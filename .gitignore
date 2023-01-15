@@ -1,3 +1,6 @@
 # To remove the virtual environment
 # Packages can be found in the 'requirements.txt' file
 venv/
+
+# Ignore gitignore
+.gitignore
