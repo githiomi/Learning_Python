@@ -68,6 +68,7 @@ class Point(object):
         self.y = new_y
 
     # INBUILT METHODS TO FOR OBJECTS - So that we don't have to access each object's attributes
+    # They will override the inbuilt class methods
     # To add object instances
     def __add__(self, other_object):  # Syntax: def __add__(self, <other-object-instance>)
         # Create a new point object and return it
@@ -87,6 +88,11 @@ class Point(object):
     def __str__(self):
         # Format the return string to display any content from the object
         return f'Coordinates: ({str(self.x)}, {str(self.y)})'
+
+    # To override the len() method
+    def __len__(self):
+        squared_sum = self.x ** 2 + self.y ** 2
+        return mth.sqrt(squared_sum)
 
     # Length method to get the magnitude of a point from the origin
     # Magnitude is gotten by getting the square root of the sum of the square of the point
