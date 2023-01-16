@@ -1,5 +1,8 @@
 # Classes work as the blueprint for creating objects
 # They have attributes, constructors and methods
+# Math import to get the square root function
+import math as mth
+
 
 # Class Example - A class called person (will be inherited by student class)
 class Person(object):
@@ -64,8 +67,64 @@ class Point(object):
         self.x = new_x
         self.y = new_y
 
+    # INBUILT METHODS TO FOR OBJECTS - So that we don't have to access each object's attributes
+    # To add object instances
+    def __add__(self, other_object):  # Syntax: def __add__(self, <other-object-instance>)
+        # Create a new point object and return it
+        return Point(self.x + other_object.x, self.y + other_object.y)
+
+    # Subtract
+    def __sub__(self, other_object):
+        return Point(self.x - other_object.x, self.y - other_object.y)
+
+    # Multiply
+    def __mul__(self, other_object):
+        # Will not create a new point object because multiplication returns a scalar value
+        return self.x - other_object.x, self.y - other_object.y
+
+    # When trying to convert an object to a string readable format
+    # This is similar to a toString() function in JAVA
+    def __str__(self):
+        # Format the return string to display any content from the object
+        return f'Coordinates: ({str(self.x)}, {str(self.y)})'
+
+    # Length method to get the magnitude of a point from the origin
+    # Magnitude is gotten by getting the square root of the sum of the square of the point
+    def length(self):
+        squared_sum = self.x ** 2 + self.y ** 2
+        return mth.sqrt(squared_sum)
+
+    # INBUILT COMPARATOR METHODS - To compare object instances of the class
+    # These methods return a boolean value
+    # Check the length() method created above
+    # Greater than
+    def __gt__(self, other_object):
+        return self.length() > other_object.length()
+
+    # Greater than or equal to
+    def __ge__(self, other_object):
+        return self.length() >= other_object.length()
+
+    # Less than
+    def __lt__(self, other_object):
+        return self.length() < other_object.length()
+
+    # Less than or equal to
+    def __le__(self, other_object):
+        return self.length() <= other_object.length()
+
+    # Check equality
+    def __eq__(self, other_object):
+        # We check this manually as Python is known to have errors with float values
+        return self.x == other_object.x and self.y == other_object.y
+
 
 # Creating points
-point_one = Point(1, 5)
-point_two = Point(2, 4)
-point_three = Point(3, 6)
+point_1 = Point(1, 5)
+point_2 = Point(2, 4)
+point_3 = Point(3, 6)
+
+# Test the code
+print(point_1 == point_2)  # Uses the __eq__ function
+print(point_2 > point_3)  # Uses the __gt__ function
+print(point_1 <= point_3)  # Uses the __le__ function
