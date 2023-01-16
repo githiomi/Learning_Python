@@ -4,7 +4,11 @@ import classes as cs
 
 # Call the method from the Person class to increase the person age then print
 # Create a student object
-student = cs.Student()
+# student = cs.Student()  # When empty, it will use the default value in the constructor parameters
+student = cs.Student('Daniel')
+
+# Print out student details
+print(student.details())
 
 # Manipulate the student object
 # This will go to classes and call the update_grade() method

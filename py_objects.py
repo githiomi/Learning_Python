@@ -7,7 +7,11 @@ import classes as cs
 
 # Create a student object
 # Syntax: <variable_name> = <module_name>.<class_name>()
-student = cs.Student()
+student = cs.Student('Student One')  # Create a student object with a name argument into the constructor
+
+
+# Print out the student details
+print(student.details())
 
 # Manipulate the student object
 print(f'Grade before update: {student.grade}')
