@@ -2,5 +2,8 @@
 # Packages can be found in the 'requirements.txt' file
 venv/
 
+# IDE packages
+.idea
+
 # Ignore gitignore
 .gitignore

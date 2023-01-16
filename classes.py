@@ -42,7 +42,30 @@ class Student(Person):
 daniel = Person()  # Will create a person object
 dhosio = Student('Dhosio')  # Will create a student object with a 'first_name' argument
 
+
 # These methods can be called and used in other python files using the following syntax
 # Eg: From classes import update_grade
 # Check grade.py class
 # Also check py_objects.py
+
+
+# DEFAULT PYTHON CLASS METHODS
+# Use a class called points
+class Point(object):
+
+    # Class constructor
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+        self.coordinates = (self.x, self.y)
+
+    # Method to move the point
+    def move(self, new_x, new_y):
+        self.x = new_x
+        self.y = new_y
+
+
+# Creating points
+point_one = Point(1, 5)
+point_two = Point(2, 4)
+point_three = Point(3, 6)
