@@ -26,6 +26,7 @@ class Animal(object):
 
     @staticmethod
     # Syntax: def <method_name>(x): - Doesn't need to pass in the class (cls) and can have any parameters (x)
+    # Majorly for creating modules with fixed class methods that will not change
     # Static methods cannot make use of class variables and methods
     def eat(n):
         # Eat a certain number of times a day
