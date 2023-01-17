@@ -27,20 +27,24 @@ class Animal(object):
     @staticmethod
     # Syntax: def <method_name>(x): - Doesn't need to pass in the class (cls) and can have any parameters (x)
     # Static methods cannot make use of class variables and methods
-    def eat(eat_num):
+    def eat(n):
         # Eat a certain number of times a day
-        for _ in eat_num:
+        for _ in n:
             print('I am eating')
 
 
 # Creating an animal object
 animal_one = Animal('Animal One')
+animal_two = Animal('Animal Two')
+animal_three = Animal('Animal Three')
 
 # To access static class attributes or methods
 # Syntax: <class-name>.<attr_name>
 print(Animal.animals)  # Will access the static class list attribute
+
 # Will print out the string representation of the object
-print(animal_one)
+for animal in Animal.animals:
+    print(animal)
 
 # Calling a class method - The number_of_animals() method
 print(Animal.number_of_animals())  # No need to pass in arguments

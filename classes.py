@@ -105,15 +105,17 @@ class Point(object):
     # Check the length() method created above
     # Greater than
     def __gt__(self, other_object):
-        return self.length() > other_object.length()
+        # Can use either length() or __len__() because we have overridden the default __len__() method
+        return self.__len__() > other_object.length()
 
     # Greater than or equal to
     def __ge__(self, other_object):
-        return self.length() >= other_object.length()
+        return self.length() >= other_object.__len__()
 
     # Less than
     def __lt__(self, other_object):
-        return self.length() < other_object.length()
+        # Alternative syntax of __len__() is len()
+        return len(self) < other_object.length()
 
     # Less than or equal to
     def __le__(self, other_object):
