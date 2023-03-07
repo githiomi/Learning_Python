@@ -31,7 +31,7 @@ class Animal(object):
     def eat(n):
         # Eat a certain number of times a day
         for _ in n:
-            print('I am eating')
+            print('I am eating')  # Will print out the output 'n ' times
 
 
 # Creating an animal object

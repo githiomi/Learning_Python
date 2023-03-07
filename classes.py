@@ -37,13 +37,18 @@ class Student(Person):
 
     # Method to concatenate details
     def details(self):
-        return f'First name: {self.f_name} {self.l_name}. I am {self.age} years old. My grade is {self.grade}'
+        return f'Full name: {self.f_name} {self.l_name}. I am {self.age} years old. My grade is {self.grade}'
 
 
 # Creating an object from a class
 # Syntax: <variable_name> = <class_name>()
 daniel = Person()  # Will create a person object
 dhosio = Student('Dhosio')  # Will create a student object with a 'first_name' argument
+
+print(dhosio.details())
+dhosio.birthday()  # To increase the age of the student by one
+dhosio.update_grade("A+")  # To update the rade of the user to the new input
+print(dhosio.details())
 
 
 # These methods can be called and used in other python files using the following syntax
