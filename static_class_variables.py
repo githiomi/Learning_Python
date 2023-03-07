@@ -30,4 +30,4 @@ dhosio = Person('Dhosio', 20)
 githiomi = Person('Githiomi', 19)
 
 # To access the persons in the list
-print(Person.persons.__str__())
+print(Person.persons[0])
