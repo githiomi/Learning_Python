@@ -19,7 +19,7 @@ class Person(object):
         return len(cls.persons)  # Will return the number of objects in the persons list
 
     # Override the print method of the class
-    def __str__(self):
+    def __repr__(self):
         return f'My name is {self.name} and I am {self.age} years old!'
 
 
@@ -30,4 +30,4 @@ dhosio = Person('Dhosio', 20)
 githiomi = Person('Githiomi', 19)
 
 # To access the persons in the list
-print(Person.persons[0])
+print(Person.persons)

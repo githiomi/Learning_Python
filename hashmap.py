@@ -1,5 +1,5 @@
 # Pandas import
-# import pandas as pd
+import pandas as pd
 
 # Hashmap or Hash table
 # This is a data structure that maps keys to its value pairs

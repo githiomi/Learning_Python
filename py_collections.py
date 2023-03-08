@@ -65,7 +65,7 @@ print(my_deque)
 my_deque.rotate(-5)  # Will shift all elements 5 spaces to the left
 print(my_deque)
 
-# Deques can also have a fixed length
+# Deque can also have a fixed length
 # This will force that when elements are added, the elements at the beginning must be removed to create space
 new_deque = deque(my_list, maxlen=4)
 # To add a new element, 'a' will be removed to ensure that the length remains at 4
