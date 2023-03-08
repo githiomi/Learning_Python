@@ -1,5 +1,5 @@
 # Pandas import
-import pandas as pd
+# import pandas as pd
 
 # Hashmap or Hash table
 # This is a data structure that maps keys to its value pairs
@@ -51,7 +51,10 @@ my_dict['phone'] = '23057118407'
 my_dict.pop('phone')
 
 # Using .popitem() - will remove the key:value pair at the end of the dictionary
-my_dict.popitem()
+my_dict.popitem()  # This will remove the age key:value pair
+
+# To print out the updated dictionary
+print(my_dict)
 
 # Using delete - Will delete the key:value pair with the specified key
 del my_dict['l_name']
